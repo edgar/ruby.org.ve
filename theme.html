@@ -1,0 +1,752 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<!-- ==============================================================================================================
+  Name:     Modern1 v1
+  Description:  This theme is developed as a result of experimenting with HTML5 and CSS3 elements.
+  Credits:      Inspiration http://www.shetanimedia.com/
+                Icons Wireframe mono [http://www.iconfinder.com/search/?q=iconset%3Acc_mono_icon_set]
+                Yanone Kaffeesatz from Google Font Firectory - http://code.google.com/webfonts/family?family=Yanone+Kaffeesatz
+  Design by:  Jiew Meng [http://jiewmeng.tumblr.com]
+  Changelog
+=============================================================================================================== -->
+
+  <meta charset="UTF-8">
+  <title>{Title}</title>
+  <meta name="if:Show description" content="1" />
+  <meta name="if:Show search" content="1" />
+  <meta name="if:Use Google Chrome Frame" content="1" />
+  <meta name="text:Twitter name" content="" />
+  <meta name="text:Disqus Shortname" content="" />
+  <meta name="text:Google Analytics UA Code" content="" />
+  <link rel="shortcut icon" href="{Favicon}" />
+  <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+  {block:Description}
+  <meta name="description" content="{MetaDescription}" />
+  {/block:Description}
+  <link rel='stylesheet' href=' http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:extralight,light,regular,bold' />
+  <link rel="stylesheet" href="http://static.tumblr.com/ikeq9mi/jD5l3owqy/reset.css" />
+  <link rel="stylesheet" href="http://static.tumblr.com/ikeq9mi/eihl3ows4/text.css" />
+  <link rel="stylesheet" href="http://static.tumblr.com/ikeq9mi/Eahl3owsp/960.css" />
+  <!--[if IE]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <style>
+header, footer, section, article, nav, aside {
+  display: block;
+}
+html {
+  background: #e6edf3;
+  background: -moz-linear-gradient(top, #e6edf3, #8a8d92 1200px);
+  background: -webkit-gradient(linear, 0 0, 0 1200, from(#e6edf3), to(#8a8d92));
+  min-height: 100%;
+  border-top: 25px solid #d2d9df;
+}
+body {
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 32px;
+  font-family: "Yanone Kaffeesatz", "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
+  color: #333e44;
+}
+h2 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+}
+#masthead {
+  margin-top: -15px;
+  border-top: 15px solid #5c6f7d;
+}
+#masthead h1 {
+  background: #cb1e16;
+  font-weight: 300;
+  font-size: 45px;
+  line-height: 40px;
+  float: left;
+  padding: 30px 25px 10px;
+  margin-left: 10px;
+}
+#masthead h1 a:link, #masthead h1 a:visited {
+  color: #e6edf3;
+  text-decoration: none;
+}
+#masthead p {
+  font-size: 26px;
+  line-height: 32px;
+  color: #5c6f7d;
+  padding: 20px 20px 0 0;
+  max-width: 680px;
+  float: right;
+}
+#wrapper {
+  background: #fff;
+  padding-bottom: 20px;
+}
+#sidebar section {
+  padding: 20px;
+  margin: 20px 10px;
+  background: #d2d9df;
+}
+#txtSearch {
+  background: #e6edf3 url("http://static.tumblr.com/ikeq9mi/6etl4ll41/search.png") no-repeat 200px center;
+}
+#mainnav a {
+  position: relative;
+  padding: 8px 8px 8px 50px;
+}
+#mainnav img {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+}
+#likes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  line-height: 20px;
+}
+#likes p {
+  margin-bottom: 10px;
+}
+#likes li {
+  padding: 10px 0;
+  border-bottom: 1px solid #E6EDF3;
+  margin: 10px 0;
+}
+#likes li:last-child {
+  border: none;
+}
+#likes li img {
+  border: 5px solid #d2d9df;
+  margin-bottom: 10px;
+}
+#likes li * {
+  max-width: 230px;
+}
+#likes blockquote {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+#grpMembers ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#grpMembers ul li {
+  padding: 0;
+  margin: 0;
+}
+#grpMembers ul li a:link, #grpMembers ul li a:visited {
+  float: left;
+  margin: 0 5px 5px 0;
+}
+#main img {
+  max-width: 500px;
+}
+article {
+  margin: 20px 10px;
+  padding: 20px 10px 20px 0;
+  position: relative;
+}
+article h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  color: #5c6f7d;
+}
+article .type {
+  position: absolute;
+  top: 36px;
+  right: -66px;
+  text-align: center;
+  background: #CB1E16;
+  width: 40px;
+  padding: 5px 10px;
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #E6EDF3;
+}
+article .type a:link, article .type a:visited {
+  color: #E6EDF3;
+  text-decoration: none;
+}
+article .type:hover, article .type a:active {
+  background: #5C6F7D;
+}
+article img {
+  border: 10px solid #d2d9df;
+}
+article .media {
+  line-height: 0;
+  border: 5px solid #d2d9df;
+  width: 500px;
+  margin-bottom: 15px;
+}
+article footer {
+  font-size: 16px;
+  line-height: 18px;
+  vertical-align: middle;
+}
+article footer img {
+  position: relative;
+  top: 3px;
+  margin: 0 5px;
+  border: none;
+}
+article footer > img:first-child {
+  margin-left: 0;
+}
+article footer .tags a:link, article footer .tags a:visited {
+  background: #d2d9df;
+  color: #5c6f7d;
+  padding: 2px 6px;
+  margin: 1px;
+  font-size: 14px;
+}
+article footer .tags a:hover, article footer .tags a:active {
+  text-decoration: none;
+  background: #cb1e16;
+  color: #e6edf3;
+}
+article .notes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin: 20px;
+  padding: 15px 30px;
+  background: #d2d9df;
+}
+article .notes li {
+  padding: 0;
+  margin: 0;
+}
+article .notes li img {
+  border: none;
+}
+#pageNav {
+  margin-bottom: 20px;
+}
+#pageNav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-size: 26px;
+  background: none;
+}
+#pageNav li {
+  padding: 0;
+  margin: 0;
+  float: left;
+  margin-right: 3px;
+}
+#pageNav a:link, #pageNav a:visited {
+  background: #5c6f7d;
+  color: #e6edf3;
+  padding: 10px 20px;
+  float: left;
+}
+#pageNav a:hover, #pageNav a:active {
+  background: #333e44;
+}
+#pageNav a.active {
+  background: #cb1e16;
+}
+#pageNav a.active:hover, #pageNav a.active:active {
+  text-decoration: none;
+}
+#pageNavOlder:after {
+  content: " >";
+}
+#pageNavNewer:before {
+  content: "< ";
+}
+#following {
+  position: relative;
+}
+#following .grid_12 > div {
+  padding: 20px;
+  margin: 0 10px;
+  background: #d2d9df;
+}
+#following h2 {
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+#following ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+}
+#following li {
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+#following a:link, #following a:visited {
+  float: left;
+  margin: 0 5px 5px 0;
+}
+#sitemeta {
+  font-size: 18px;
+  padding-top: 20px;
+  border-top: 10px solid #d2d9df;
+  background: #5c6f7d;
+  color: #e6edf3;
+}
+#sitemeta p {
+  padding: 0 30px;
+}
+#sitemeta a:link, #sitemeta a:visited {
+  color: #e6edf3;
+  text-decoration: underline;
+}
+#sitemeta a:hover, #sitemeta a:active {
+  text-decoration: none;
+  color: #333e44;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #d2d9df;
+}
+nav ul li {
+  padding: 0;
+  margin: 0;
+}
+nav ul li a:link, nav ul li a:visited {
+  display: block;
+  padding: 5px 20px;
+  margin-bottom: 5px;
+  background: #5c6f7d;
+  color: #e6edf3;
+  text-decoration: none;
+  font-weight: 400;
+}
+nav ul li a:hover, nav ul li a:active {
+  background: #333e44;
+}
+a:link, a:visited {
+  color: #cb1e16;
+  text-decoration: none;
+}
+a:hover, a:active {
+  text-decoration: underline;
+}
+input[type=text] {
+  padding: 5px;
+  width: 230px;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 32px;
+  font-family: "Yanone Kaffeesatz", "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
+  background: #e6edf3;
+  color: #8a8d92;
+  border: none;
+}
+input[type=text]:focus {
+  color: #333e44;
+}
+pre {
+  margin: 20px;
+  border-left: 5px solid #5c6f7d;
+  padding-left: 20px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Yanone Kaffeesatz", "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
+  overflow-x: auto;
+}
+pre code {
+  background: none;
+}
+code {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Yanone Kaffeesatz", "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
+  background: #d2d9df;
+  padding: 2px 5px;
+}
+blockquote {
+  margin: 20px;
+  border-left: 5px solid #5c6f7d;
+  padding-left: 20px;
+}
+#dsq-content {
+  font-size: 20px !important;
+  line-height: 26px;
+}
+{CustomCSS}
+  </style>
+</head>
+<body>
+  {block:IfUseGoogleChromeFrame}
+  <!--[If IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script src="http://static.tumblr.com/ikeq9mi/5ORl4gyp0/innershiv.min.js"></script>
+  <script>
+   $(function() {
+     CFInstall.check({
+       destination: window.location.href,
+       preventPrompt: true,
+       onmissing: function() {
+         $("#main").prepend(innerShiv('<article><header><p class="type">info</p><h2>You are using Internet Explorer</h2></header><p><a href="http://www.google.com/chromeframe" title="Install Google Chrome Frame"><img src="http://farm2.static.flickr.com/1103/4726899471_5204558d92.jpg" alt="Google Chrome Frame" /></a></p><p>It is recommended that you use a modern browser like <a href="www.mozilla.com/firefox/">Firefox</a>, <a href="www.google.com/chrome">Chrome</a> or install <a href="http://www.google.com/chromeframe">Google Chrome Frame</a> to experience better performance and advanced HTML5 and CSS3 features. Google Chrome Frame is a plug-in for internet explorer, it installs in seconds and do not require a browser restart</p></article>'));
+       }
+     });
+
+     $("#likes li:last-child").css("margin-right", 0);
+   });
+  </script>
+  <![endif] -->
+  {/block:IfUseGoogleChromeFrame}
+
+  <!--====================== Masthead ====================================================-->
+  <header id="masthead" class="container_12 clearfix">
+    <div class="grid_12">
+      <h1><a href="/">{Title}</a></h1>
+        {block:IfShowDescription}
+        <p>{Description}</p>
+        {/block:IfShowDescription}
+    </div>
+  </header>
+  <!--====================== wrapper ====================================================-->
+  <div id="wrapper" class="container_12 clearfix">
+    <!--====================== sidebar ====================================================-->
+    <aside id="sidebar" class="grid_4">
+
+      {block:IfShowSearch}
+      <!--====================== sidebar: search ============================================-->
+      <section id="search">
+        <form action="/search" method="get">
+          <input type="text" id="txtSearch" name="q" value="{SearchQuery}" />
+        </form>
+      </section>
+      {/block:IfShowSearch}
+
+      <!--====================== sidebar: mainnav ============================================-->
+      <section>
+        <nav id="mainnav">
+          <ul>
+            {block:AskEnabled}<li><a href="/ask"><img src="http://static.tumblr.com/ikeq9mi/pmCl4ll7s/ask.png" /> Ask a question</a></li>{/block:AskEnabled}
+            {block:SubmissionsEnabled}<li><a href="/submit"><img src="http://static.tumblr.com/ikeq9mi/91gl4llao/submit.png" /> Submit an article</a></li>{/block:SubmissionsEnabled}
+            <li><a href="/random"><img src="http://static.tumblr.com/ikeq9mi/Jopl4ll9v/random.png" /> Random post</a></li>
+            <li><a href="{RSS}"><img src="http://static.tumblr.com/ikeq9mi/3Q1l4llaa/rss.png" /> RSS</a></li>
+            <li><a href="/archive"><img src="http://static.tumblr.com/ikeq9mi/Kmnl4ll9b/archive.png" /> Archive</a></li>
+            {block:IfTwitterName}
+            <li><a href="http://twitter.com/{text:Twitter name}"><img src="http://static.tumblr.com/ikeq9mi/np2l4llb8/twitter.png" /> Twitter</a></li>
+            {/block:IfTwitterName}
+          </ul>
+        </nav>
+      </section>
+
+      {block:HasPages}
+      <!--====================== sidebar: pages nav ============================================-->
+      <section>
+        <nav>
+          <ul>
+            {block:Pages}
+            <li><a href="{URL}">{Label}</a></li>
+            {/block:Pages}
+          </ul>
+        </nav>
+      </section>
+      {block:HasPages}
+
+      {block:Likes}
+      <section>
+        <header>
+          <h2>likes</h2>
+        </header>
+        {Likes limit="5" width="230" summarize="100"}
+      </section>
+      {/block:Likes}
+
+      {block:GroupMembers}
+      <section id="grpMembers" class="clearfix">
+        <header>
+          <h2>Group Members</h2>
+        </header>
+
+        <ul>
+          {block:GroupMember}
+          <li><a href="{GroupMemberURL}" title="{GroupMemberName}"><img src="{GroupMemberPortraitURL-40}" /></a></li>
+          {/block:GroupMember}
+        </ul>
+      </section>
+      {block:GroupMembers}
+
+
+    </aside>
+    <!--====================== main content ============================================-->
+    <section id="main" class="grid_8">
+      {block:SearchPage}
+      <article>
+        <header>
+          <p class="type">info</p>
+        </header>
+        <h2>Searched for <a href="{URLSafeSearchQuery}">{SearchQuery}</a></h2>
+        {block:NoSearchResults}
+        <h3>No Search Results ... try another search query ...</h3>
+        {/block:NoSearchResults}
+      </article>
+      {/block:SearchPage}
+
+      {block:TagPage}
+      <article>
+        <header>
+          <p class="type">info</p>
+        </header>
+        <h2>Posts tagged <a href="{TagURL}">{Tag}</a></h2>
+      </article>
+      {/block:TagPage}
+
+      {block:DayPage}
+      <article>
+        <header>
+          <p class="type">info</p>
+          <h2>Viewing posts of <a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{Month} {DayOfMonth}, {Year}</a></h2>
+        </header>
+      </article>
+      {/block:DayPage}
+
+      {block:Posts}
+      <article>
+        {block:Text}
+        <header>
+          <p class="type"><a href="{Permalink}">text</a></p>
+          {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+        </header>
+        {Body}
+        {/block:Text}
+
+        {block:Photo}
+        <header>
+          <p class="type"><a href="{Permalink}">photo</a></p>
+        </header>
+        {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}
+        {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+        {/block:Photo}
+
+        {block:Photoset}
+        <header>
+          <p class="type"><a href="{Permalink}">photos</a></p>
+        </header>
+        <div class="media">{Photoset-500}</div>
+        {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+        {/block:Photoset}
+
+        {block:Link}
+        <header>
+          <p class="type"><a href="{Permalink}">link</a></p>
+          <h2><a href="{URL}" {Target}>{Name}</a></h2>
+        </header>
+        {block:Description}
+        <div>{Description}</div>
+        {/block:Description}
+        {/block:Link}
+
+        {block:Quote}
+        <header>
+          <p class="type"><a href="{Permalink}">quote</a></p>
+        </header>
+        <h2>{Quote}</h2>
+        {block:Source}<p>{Source}</p>{/block:Source}
+        {/block:Quote}
+
+        {block:Chat}
+        <header>
+          <p class="type"><a href="{Permalink}">chat</a></p>
+          {block:Title}<h2>{Title}</h2>{/block:Title}
+        </header>
+        <ul>
+          {block:Lines}
+          <li>{block:Label}<strong>{Label}</strong>{/block:Label} {Line}</li>
+          {/block:Lines}
+        </ul>
+        {/block:Chat}
+
+        {block:Audio}
+        <header>
+          <p class="type"><a href="{Permalink}">audio</a></p>
+        </header>
+        {AudioPlayer}
+        {block:Caption}
+        <div class="caption">
+          {Caption}
+        </div>
+        {/block:Caption}
+        {/block:Audio}
+
+        {block:Video}
+        <header>
+          <p class="type"><a href="{Permalink}">video</a></p>
+        </header>
+        <div class="media">{Video-500}</div>
+        {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+        {/block:Video}
+
+        {block:Answer}
+        <header>
+          <p class="type"><a href="{Permalink}">Q&amp;A</a></p>
+          <h3>{Asker} asked: {Question}</h3>
+        </header>
+        {Answer}
+        {/block:Answer}
+
+        {block:Date}
+        {block:IfDisqusShortname}
+        <script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>{block:Permalink}<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /**
+    * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread]
+    */
+  (function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+{/block:Permalink}<script type="text/javascript">
+//<![CDATA[
+(function() {
+  var links = document.getElementsByTagName('a');
+  var query = '?';
+  for(var i = 0; i < links.length; i++) {
+  if(links[i].href.indexOf('#disqus_thread') >= 0) {
+    query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+  }
+  }
+  document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+})();
+//]]>
+</script>
+        {/block:IfDisqusShortname}
+
+        {block:PostNotes}
+          {PostNotes}
+        {/block:PostNotes}
+
+       <footer>
+         {block:NoteCount}<img src="http://static.tumblr.com/ikeq9mi/5KTl4lm2k/notes.png" alt="notes" title="notes" /> <a href="{Permalink}#notes">{NoteCountWithLabel}</a> {/block:NoteCount}
+         <img src="http://static.tumblr.com/ikeq9mi/wr6l4lm2z/posted.png" alt="posted" title="posted" /> <a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{TimeAgo}</a>
+         {block:HasTags}<span class="tags"><img src="http://static.tumblr.com/ikeq9mi/mkol4lm3e/tag.png" alt="tagged" title="tagged" /> {block:Tags}<a href="{TagURL}">{Tag}</a>{/block:Tags}</span>{/block:HasTags}
+       </footer>
+      {/block:Date}
+      </article>
+      {/block:Posts}
+
+      {block:PermalinkPagination}
+      <nav id="pageNav">
+        <ul class="clearfix">
+          {block:PreviousPost}<li><a href="{PreviousPost}" id="pageNavNewer">Newer</a></li>{/block:PreviousPost}
+          {block:NextPost}<li><a href="{NextPost}" id="pageNavOlder">Older</a></li>{/block:NextPost}
+        </ul>
+      </nav>
+      {/block:PermalinkPagination}
+
+      {block:Pagination}
+      <nav id="pageNav">
+        <ul class="clearfix">
+          {block:PreviousPage}<li><a href="{PreviousPage}" id="pageNavNewer">Newer</a></li>{/block:PreviousPage}
+          {block:JumpPagination length="5"}
+          {block:CurrentPage}<li><a href="{URL}" class="active">{PageNumber}</a></li>{/block:CurrentPage}
+          {block:JumpPage}<li><a href="{URL}">{PageNumber}</a></li>{/block:JumpPage}
+          {/block:JumpPagination}
+          {block:NextPage}<li><a href="{NextPage}" id="pageNavOlder">Older</a></li>{/block:NextPage}
+        </ul>
+      </nav>
+      {/block:Pagination}
+
+      {block:DayPagination}
+      <nav id="pageNav">
+        <ul class="clearfix">
+          {block:PreviousDayPage}<li><a href="{PreviousDayPage}">&lt; {DayOfMonth} {ShortMonth}</a></li>{/block:PreviousDayPage}
+          {block:NextDayPage}<li><a href="{NextDayPage}">{DayOfMonth} {ShortMonth} &gt;</a></li>{block:NextDayPage}
+        </ul>
+      </nav>
+      {/block:DayPagination}
+    </section>
+
+    <div class="clear"></div>
+
+    {block:Following}
+    <section id="following" class="clearfix">
+      <div class="grid_12">
+        <div>
+          <header>
+            <h2>Following</h2>
+          </header>
+          <ul class="clearfix">
+            {block:followed}
+            <li><a title="{FollowedTitle}" href="{FollowedURL}"><img src="{FollowedPortraitURL-40}"></a></li>
+            {/block:followed}
+          </ul>
+        </div>
+      </div>
+    </section>
+    {/block:Following}
+
+  </div>
+
+  <footer id="sitemeta" class="container_12 clearfix">
+    <div class="grid_12">
+      <p>
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank" title="view licence info" style="float:right;">
+          <img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" alt="Creative Commons Attribution Share-alike 3.0" style="border: none;" />
+        </a>
+        <a href="http://www.tumblr.com/theme/11037">Modern1</a> - Free Tumblr Theme by <a href="http://www.tumblr.com/themes/by/jiewmeng">Jiew Meng</a>
+      </p>
+    </div>
+  </footer>
+<script>
+$(function() {
+  var search = $("#txtSearch").val();
+  var placeholder = "search {Title} ...";
+
+  if (search == "") {
+    $("#txtSearch").val(placeholder);
+  }
+  $("#txtSearch").blur(function() {
+    search = $("#txtSearch").val();
+    if (!(search != "" && search != placeholder)) {
+      $("#txtSearch").val(placeholder);
+    }
+  });
+  $("#txtSearch").focus(function() {
+    search = $("#txtSearch").val();
+    if (search == placeholder) {
+      $("#txtSearch").val("");
+    }
+  });
+});
+</script>
+
+{block:IfGoogleAnalyticsUACode}
+  <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '{text:Google Analytics UA Code}']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+{/block:IfGoogleAnalyticsUACode}
+</body>
+</html>
+
